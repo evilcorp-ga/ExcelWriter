@@ -67,5 +67,5 @@ def csv():
 if __name__ == '__main__':
     #If we enter using 'python start.py' we need app.run. If we run with 'flask run' then we do not.
     # app.run(debug=True, port=5000, threaded=True)
-    app.run(debug=True, port=5000, threaded=True, host="dirks-mbp")
+    app.run(debug=True, port=5000, threaded=True, host="localhost")
     # threaded: is not default and needed to make internal api http requests

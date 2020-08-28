@@ -2,3 +2,6 @@ flask
 pandas
 pylint
 openpyxl
+lxml
+beautifulsoup4
+xlsxwriter
