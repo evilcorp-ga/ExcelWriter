@@ -45,7 +45,6 @@ def csv():
             csv = form.get('input' or '')
             output_path = convert(path, filename, csv)
 
-            print('POST REQUEST: \n', form)
             return jsonify({
                 'success': True,
                 'filename': filename,

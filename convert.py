@@ -2,13 +2,16 @@ import pandas as pd
 from bs4 import BeautifulSoup
 import os
 from io import StringIO
+converter = {}
 
 def htmler(value):
     soup = BeautifulSoup(value,features="lxml")
     return soup.get_text(separator='\n')
 
+for i in range(0,100):
+    converter[i] = htmler
+
 def convert(path, filename, csv, sep=",", skiprows=4):
-    converter = {"Description (HTML)":htmler}
     stream = StringIO(csv)
     df = pd.read_csv(stream, sep=sep, skiprows=skiprows, converters=converter)
     output_path = os.path.join(path, filename)
